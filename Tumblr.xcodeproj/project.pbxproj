@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		051CCCC21D387C2E001CB74A /* DemoPrototypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051CCCC11D387C2E001CB74A /* DemoPrototypeCell.swift */; };
+		05B4EB711D395E4E00337CD2 /* PhotosDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4EB701D395E4E00337CD2 /* PhotosDetailViewController.swift */; };
 		05BBFC381D386E0900FA5611 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BBFC371D386E0900FA5611 /* AppDelegate.swift */; };
 		05BBFC3A1D386E0900FA5611 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05BBFC391D386E0900FA5611 /* PhotosViewController.swift */; };
 		05BBFC3D1D386E0900FA5611 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05BBFC3B1D386E0900FA5611 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		051CCCC11D387C2E001CB74A /* DemoPrototypeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoPrototypeCell.swift; sourceTree = "<group>"; };
+		05B4EB701D395E4E00337CD2 /* PhotosDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotosDetailViewController.swift; path = ../../tumblr/Tumblr/PhotosDetailViewController.swift; sourceTree = "<group>"; };
 		05BBFC341D386E0900FA5611 /* Tumblr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tumblr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05BBFC371D386E0900FA5611 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05BBFC391D386E0900FA5611 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				05BBFC371D386E0900FA5611 /* AppDelegate.swift */,
 				05BBFC391D386E0900FA5611 /* PhotosViewController.swift */,
 				05BBFC3B1D386E0900FA5611 /* Main.storyboard */,
+				05B4EB701D395E4E00337CD2 /* PhotosDetailViewController.swift */,
 				051CCCC11D387C2E001CB74A /* DemoPrototypeCell.swift */,
 				05BBFC3E1D386E0900FA5611 /* Assets.xcassets */,
 				05BBFC401D386E0900FA5611 /* LaunchScreen.storyboard */,
@@ -213,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05B4EB711D395E4E00337CD2 /* PhotosDetailViewController.swift in Sources */,
 				051CCCC21D387C2E001CB74A /* DemoPrototypeCell.swift in Sources */,
 				05BBFC3A1D386E0900FA5611 /* PhotosViewController.swift in Sources */,
 				05BBFC381D386E0900FA5611 /* AppDelegate.swift in Sources */,

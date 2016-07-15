@@ -15,8 +15,6 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var posts: [NSDictionary]! = [NSDictionary]()
     var photos: [NSDictionary]! = [NSDictionary]()
 
-    override func viewWillAppear(animated: Bool) {
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -77,8 +75,6 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         cell.myImage.setImageWithURL(url)
         
-//        let url = NSURL(string: "https://65.media.tumblr.com/3aacabb6d75827114f0192221ecfd0cb/tumblr_oabv07PJdN1qggwnvo1_75sq.jpg")!
-        
         return cell
     }
     
@@ -86,6 +82,36 @@ class PhotosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }
+    
+   
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    
+        let vc = segue.destinationViewController as! PhotosDetailViewController
+        let indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
+        
+        if let temp = posts[indexPath!.row] as? NSDictionary {
+            //NSLog("temp:\(temp)")
+            if let photos = temp["photos"] as? [AnyObject] {
+                NSLog("photos:\(photos)")
+                if let p = photos[0] as? NSDictionary {
+                    if let orgImg = p["original_size"] as? NSDictionary {
+                        if let url = orgImg["url"] as? String {
+                            vc.text = url;
+                        }
+                    }
+                }
+            }
+        } else {
+            NSLog("temp is null");
+        }
+    }
 
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //Get rid of the gray selection effect by deselecting the cell with animation
+        tableView.deselectRowAtIndexPath(indexPath, animated:true)
+    }
 }
 
